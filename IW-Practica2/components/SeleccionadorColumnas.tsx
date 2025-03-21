@@ -4,7 +4,9 @@ type SeleccionadorColumnasProps = {
   onChangeColumns: (columns: number) => void;
 };
 
-const SeleccionadorColumnas: FunctionalComponent<SeleccionadorColumnasProps> = ({ onChangeColumns }) => {
+const SeleccionadorColumnas: FunctionalComponent<SeleccionadorColumnasProps> = (
+  { onChangeColumns },
+) => {
   return (
     <div class="btn-group">
       <button class="button" onClick={() => onChangeColumns(1)}>1</button>

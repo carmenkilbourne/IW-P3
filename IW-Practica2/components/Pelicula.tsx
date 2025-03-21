@@ -4,6 +4,7 @@ type Props = {
     original_title:string;
     release_date:string;
     backdrop_path:string;
+    popularity:number;
 }
 
 const Pelicula: FunctionalComponent<Props> = (props) => {

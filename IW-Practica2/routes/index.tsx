@@ -6,6 +6,7 @@ type Pelicula = {
   original_title: string;
   release_date: string;
   backdrop_path: string;
+  popularity: number;
 };
 
 type Data = {
@@ -17,13 +18,14 @@ type PeliculaAPI = {
     original_title: string;
     release_date: string;
     backdrop_path: string;
+    popularity: number;
   }>;
 };
 
 export const handler: Handlers = {
   GET: async (req: Request, ctx: FreshContext<unknown, Data>) => {
     const webURL = new URL(req.url);
-    const name = webURL.searchParams.get("name"); 
+    const name = webURL.searchParams.get("name");
 
     try {
       const response = await Axios.get<PeliculaAPI>(
@@ -34,12 +36,11 @@ export const handler: Handlers = {
             Authorization:
               "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmZmYTcxYmU1ZGFhMDBlMTJjMWJjMTMxMjBlM2Q3NSIsIm5iZiI6MTY4NTM4MTkzNS4wMTYsInN1YiI6IjY0NzRlMzJmY2MyNzdjMDBhNzQ2MTYzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.raEEljpmsGfGMENtPmE-LFWcBEiDUcFKG5B-8_WQABQ",
           },
-        }
+        },
       );
 
       return ctx.render({ peliculas: response.data.results });
     } catch (e) {
-      console.error("Error fetching data from API:", e);
       return new Response("Error fetching data from API", { status: 500 });
     }
   },

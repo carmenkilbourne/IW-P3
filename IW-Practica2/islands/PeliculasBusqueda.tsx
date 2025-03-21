@@ -15,12 +15,11 @@ type Props = {
 };
 
 const PeliculasBusqueda: FunctionalComponent<Props> = ({ peliculas }) => {
-  const query = useSignal(""); 
+  const query = useSignal("");
   const columns = useSignal(3);
 
-
   return (
-    <div class = "peliculas-busqueda">
+    <div class="peliculas-busqueda">
       <BarraBusqueda></BarraBusqueda>
       <SeleccionadorColumnas onChangeColumns={(c) => (columns.value = c)} />
       <PeliculaContainer peliculas={peliculas} columns={columns.value} />

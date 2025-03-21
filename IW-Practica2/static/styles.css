@@ -1,5 +1,5 @@
 .btn-group .button {
-  background-color: hsl(0, 0%, 100%); 
+  background-color: hsl(0, 0%, 100%);
   color: #000000;
   border: #000000;
   padding: 15px 32px;
@@ -7,8 +7,6 @@
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
-
-
 }
 
 .btn-group .button:hover {
@@ -16,23 +14,33 @@
 }
 .charactersContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px; 
-  padding: 20px; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .peliculaCard img {
   max-width: 50px;
   max-height: 50px;
-  object-fit: contain; 
+  object-fit: contain;
 }
 
 .peliculas-busqueda {
   display: flex;
-  flex-direction: column; /* Coloca los elementos en una columna */
-  gap: 20px; /* Espaciado entre los elementos */
+  flex-direction: column;
+  gap: 20px;
   padding: 20px;
-  align-items: center; /* Centra los elementos horizontalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
+  align-items: center;
+  justify-content: center;
   width: 100%;
+}
+.progress-bar-container {
+  width: 50px;
+  height: 10px;
+  background-color: #e0e0e0;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #70add6;
 }
