@@ -24,12 +24,12 @@ type PeliculaAPI = {
 
 export const handler: Handlers = {
   GET: async (req: Request, ctx: FreshContext<unknown, Data>) => {
-    const webURL = new URL(req.url);
-    const name = webURL.searchParams.get("name");
+    const url = new URL(req.url);
+    const title = url.searchParams.get("name");
 
     try {
       const response = await Axios.get<PeliculaAPI>(
-        `https://api.themoviedb.org/3/search/movie?query=${name}`,
+        `https://api.themoviedb.org/3/search/movie?query=${title}`,
         {
           headers: {
             accept: "application/json",

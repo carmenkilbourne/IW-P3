@@ -8,6 +8,7 @@ type Pelicula = {
   original_title: string;
   release_date: string;
   backdrop_path: string;
+  popularity:number;
 };
 
 type Props = {

@@ -1,10 +1,10 @@
 import { FunctionalComponent } from "preact";
 
-type SeleccionadorColumnasProps = {
+type Props = {
   onChangeColumns: (columns: number) => void;
 };
 
-const SeleccionadorColumnas: FunctionalComponent<SeleccionadorColumnasProps> = (
+const SeleccionadorColumnas: FunctionalComponent<Props> = (
   { onChangeColumns },
 ) => {
   return (

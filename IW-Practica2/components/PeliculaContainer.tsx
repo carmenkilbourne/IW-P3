@@ -20,7 +20,7 @@ const PeliculasContainer: FunctionalComponent<Props> = (
     <div
       class="charactersContainer"
       style={{
-        gridTemplateColumns: `repeat(${columns}, 1fr)`, // Ajusta el número de columnas
+        gridTemplateColumns: `repeat(${columns}, 1fr)`, 
       }}
     >
       {peliculas.map((pelicula) => (
