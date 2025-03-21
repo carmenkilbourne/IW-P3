@@ -6,6 +6,7 @@ type Pelicula = {
   release_date: string;
   backdrop_path: string;
   popularity: number;
+  id: number;
 };
 
 type Props = {
@@ -18,13 +19,13 @@ const PeliculasContainer: FunctionalComponent<Props> = (
 ) => {
   return (
     <div
-      class="charactersContainer"
+      class="peliculasContainer"
       style={{
         gridTemplateColumns: `repeat(${columns}, 1fr)`, 
       }}
     >
       {peliculas.map((pelicula) => (
-        <PeliculaCard key={pelicula.original_title} pelicula={pelicula} />
+        <PeliculaCard key={pelicula.id} pelicula={pelicula} />
       ))}
     </div>
   );

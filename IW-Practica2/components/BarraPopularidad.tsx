@@ -7,9 +7,9 @@ type BarraProgresoProps = {
 const BarraPopularidad: FunctionalComponent<BarraProgresoProps> = ({ popularity }) => {
 
   return (
-    <div class="progress-bar-container">
+    <div class="Barra_container">
       <div
-        class="progress-bar"
+        class="Barra_popularidad "
         style={{ width: `${(popularity / 10) * 100}%` }}
       ></div>
     </div>

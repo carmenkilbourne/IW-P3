@@ -7,10 +7,11 @@ type Props = {
         release_date: string;
         backdrop_path: string;
         popularity: number;
+        id: number;
     };
 };
 const PeliculaCard: FunctionComponent<Props> = (props: Props) => {
-    const { original_title, release_date, backdrop_path, popularity } =
+    const { original_title, release_date, backdrop_path, popularity,id } =
         props.pelicula;
     return (
         <div>

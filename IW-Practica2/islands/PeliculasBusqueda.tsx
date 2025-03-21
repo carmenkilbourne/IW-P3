@@ -9,6 +9,7 @@ type Pelicula = {
   release_date: string;
   backdrop_path: string;
   popularity:number;
+  id: number;
 };
 
 type Props = {
@@ -22,7 +23,7 @@ const PeliculasBusqueda: FunctionalComponent<Props> = ({ peliculas }) => {
   return (
     <div class="peliculas-busqueda">
       <BarraBusqueda></BarraBusqueda>
-      <SeleccionadorColumnas onChangeColumns={(c) => (columns.value = c)} />
+      <SeleccionadorColumnas numeroColumnas={(c) => (columns.value = c)} />
       <PeliculaContainer peliculas={peliculas} columns={columns.value} />
     </div>
   );

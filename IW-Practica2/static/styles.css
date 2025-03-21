@@ -12,7 +12,7 @@
 .btn-group .button:hover {
   background-color: hsl(0, 100%, 40%);
 }
-.charactersContainer {
+.peliculasContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
@@ -34,13 +34,13 @@
   justify-content: center;
   width: 100%;
 }
-.progress-bar-container {
+.Barra_container {
   width: 50px;
   height: 10px;
   background-color: #e0e0e0;
 }
 
-.progress-bar {
+.Barra_popularidad {
   height: 100%;
   background-color: #70add6;
 }

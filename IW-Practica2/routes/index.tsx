@@ -7,6 +7,7 @@ type Pelicula = {
   release_date: string;
   backdrop_path: string;
   popularity: number;
+  id: number;
 };
 
 type Data = {
@@ -19,6 +20,7 @@ type PeliculaAPI = {
     release_date: string;
     backdrop_path: string;
     popularity: number;
+    id: number;
   }>;
 };
 
