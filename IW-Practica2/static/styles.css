@@ -1,0 +1,38 @@
+.btn-group .button {
+  background-color: hsl(0, 0%, 100%); 
+  color: #000000;
+  border: #000000;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+
+}
+
+.btn-group .button:hover {
+  background-color: hsl(0, 100%, 40%);
+}
+.charactersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px; 
+  padding: 20px; 
+}
+
+.peliculaCard img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain; 
+}
+
+.peliculas-busqueda {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  gap: 20px; /* Espaciado entre los elementos */
+  padding: 20px;
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  width: 100%;
+}
